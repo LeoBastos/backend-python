@@ -17,3 +17,8 @@ class Empresas(Base):
 
     def __repr__(self) -> str:
         return f"User [name={self.name}]"
+
+    def __eq__(self, other):
+        if self.id == other.id and self.name == other.name:
+            return True
+        return False
