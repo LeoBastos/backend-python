@@ -9,7 +9,7 @@ empresa_repository = EmpresaRepository()
 db_connection_handler = DBConnectionHandler()
 
 
-def test_insert_user():
+def test_insert_empresa():
     """Should Insert Empresa"""
 
     name = faker.name()

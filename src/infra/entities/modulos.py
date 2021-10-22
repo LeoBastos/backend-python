@@ -16,3 +16,14 @@ class Modulos(Base):
 
     def __rep__(self):
         return f"Modulo:[name={self.name},version={self.version},isActive={self.isActive},empresa_id={self.empresa_id}]"
+
+    def __eq__(self, other):
+        if (
+            self.id == other.id
+            and self.name == other.name
+            and self.version == other.version
+            and self.isActive == other.isActive
+            and self.empresa_id == other.empresa_id
+        ):
+            return True
+        return False
